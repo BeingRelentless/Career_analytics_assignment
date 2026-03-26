@@ -4,7 +4,9 @@ const connectDB = require('./config/db');
 const cors = require('cors');
 const dotenv = require('dotenv');
 
+// Import routes
 const authRoutes = require('./routes/authRoutes');
+const walletRoutes = require('./routes/walletRoutes');
 
 dotenv.config();
 
@@ -21,6 +23,8 @@ connectDB();
 
 // mount auth routes
 app.use('/api/auth', authRoutes);
+// mount wallet routes
+app.use('/api/wallet', walletRoutes);
 
 const PORT = process.env.PORT || 5000;
 
