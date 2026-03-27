@@ -7,6 +7,7 @@ const dotenv = require('dotenv');
 // Import routes
 const authRoutes = require('./routes/authRoutes');
 const walletRoutes = require('./routes/walletRoutes');
+const adminRoutes = require('./routes/adminRoutes');
 
 dotenv.config();
 
@@ -25,6 +26,8 @@ connectDB();
 app.use('/api/auth', authRoutes);
 // mount wallet routes
 app.use('/api/wallet', walletRoutes);
+// mount admin routes
+app.use('/api/admin', adminRoutes);
 
 const PORT = process.env.PORT || 5000;
 
