@@ -170,7 +170,7 @@ BettingApp/
 
 3. Create a `.env` file in the backend directory with:
    ```
-   MONGO_URI=mongodb+srv://username:password@cluster.mongodb.net/betting_app
+   MONGO_URI=mongoDB_uri here
    JWT_SECRET=your_secure_random_secret_key_here
    NODE_ENV=development
    PORT=5000
