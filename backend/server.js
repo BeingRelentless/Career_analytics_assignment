@@ -8,6 +8,7 @@ const dotenv = require('dotenv');
 const authRoutes = require('./routes/authRoutes');
 const walletRoutes = require('./routes/walletRoutes');
 const adminRoutes = require('./routes/adminRoutes');
+const gameRoutes = require('./routes/gameRoutes');
 
 dotenv.config();
 
@@ -28,6 +29,9 @@ app.use('/api/auth', authRoutes);
 app.use('/api/wallet', walletRoutes);
 // mount admin routes
 app.use('/api/admin', adminRoutes);
+// mount game routes
+app.use('/api/game', gameRoutes);
+
 
 const PORT = process.env.PORT || 5000;
 
