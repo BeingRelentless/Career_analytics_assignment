@@ -22,16 +22,16 @@
       return <Navigate to="/admin" />;
     }
 
-    return <Navigate to="/register" />;
+    return <Navigate to="/game" />;
   };
 
   function App() {
     return (
       <Router>
         <Routes>
-          <Route path="/" element={<HomeRedirect />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} /> 
+          <Route path="/" element={<HomeRedirect />} />
 
           <Route
             path="/game"
